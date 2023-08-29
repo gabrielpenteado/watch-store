@@ -1,4 +1,4 @@
-import { Cart } from "./Cart";
+import { CartIcon } from "./CartIcon";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
@@ -18,7 +18,7 @@ export function Navbar() {
           Shop
         </Link>
         <Link to="/cart">
-          <Cart />
+          <CartIcon qty={0} />
         </Link>
       </nav>
     </header>

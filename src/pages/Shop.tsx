@@ -2,9 +2,7 @@ import products from "../assets/products.tsx";
 import { Card } from "../components/Card.js";
 
 export function Shop() {
-  const watchCards = products.map((watch) => (
-    <Card key={watch.id} {...watch} />
-  ));
+  const watchCards = products.map((item) => <Card key={item.id} {...item} />);
 
   return (
     <main className="min-h-[80vh] bg-[whitesmoke]">

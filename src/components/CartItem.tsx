@@ -21,7 +21,7 @@ export default function CartItem(props: CartItemProps) {
         <p className="font-black text-gray-800 md:text-xl font-heading">
           {title}
         </p>
-        <p className="font-bold text-lg md:text-2xl">₹{price * qty}</p>
+        <p className="font-bold text-lg md:text-2xl">${price * qty}</p>
         <p className="inline-block my-2">
           <button
             className="h-8 w-8 rounded-full font-bold border border-gray-400 
