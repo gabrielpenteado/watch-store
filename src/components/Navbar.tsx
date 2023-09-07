@@ -1,7 +1,12 @@
+import { useSelector } from "react-redux";
 import { CartIcon } from "./CartIcon";
 import { Link } from "react-router-dom";
 
+import { RootState } from "../store";
+
 export function Navbar() {
+  const cartProducts = useSelector((state: RootState) => state.cart);
+
   return (
     <header className="flex justify-around h-[10vh] items-center px-4 text-white ">
       <Link
@@ -18,7 +23,7 @@ export function Navbar() {
           Shop
         </Link>
         <Link to="/cart">
-          <CartIcon qty={0} />
+          <CartIcon quantity={cartProducts.length} />
         </Link>
       </nav>
     </header>

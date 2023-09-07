@@ -9,9 +9,9 @@ export type Product = {
   url: string;
 };
 
-export interface cartState {
-  cart: Product[];
-}
+// export interface cartState {
+//   cart: Product[];
+// }
 
 export interface cartAction {
   type: string;
@@ -20,24 +20,22 @@ export interface cartAction {
 
 const savedCart = localStorage.getItem("cartItems");
 
-const initialState: cartState = {
-  cart: savedCart ? JSON.parse(savedCart) : [],
-};
+const initialState = savedCart ? JSON.parse(savedCart) : [];
 
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addProduct: (state: cartState, action: cartAction) => {
+    addProduct: (state: Product[], action: cartAction) => {
       // verify if product is already in the cart
-      const productIsInTheCart = state.cart.some(
+      const productIsInTheCart = state.some(
         (product: Product) => product.id === action.payload.id
       );
 
       // if. the product exist in cart: plus 1 to this product quantity
       // else. add this product to cart
       if (productIsInTheCart) {
-        state.cart = state.cart.map((product) =>
+        const newCart = state.map((product) =>
           product.id === action.payload.id
             ? { ...product, quantity: product.quantity + 1 }
             : product
@@ -54,9 +52,10 @@ export const cartSlice = createSlice({
           theme: "light",
         });
 
-        localStorage.setItem("cartItems", JSON.stringify(state.cart));
+        localStorage.setItem("cartItems", JSON.stringify(newCart));
+        return newCart;
       } else {
-        state.cart = [...state.cart, { ...action.payload, quantity: 1 }];
+        const newCart = [...state, { ...action.payload, quantity: 1 }];
 
         toast.success("Product added to cart!", {
           position: "bottom-right",
@@ -69,12 +68,13 @@ export const cartSlice = createSlice({
           theme: "light",
         });
 
-        localStorage.setItem("cartItems", JSON.stringify(state.cart));
+        localStorage.setItem("cartItems", JSON.stringify(newCart));
+        return newCart;
       }
     },
 
-    increaseQuantity: (state, action) => {
-      state.cart = state.cart.map((product) =>
+    increaseQuantity: (state: Product[], action) => {
+      const newCart = state.map((product) =>
         product.id === action.payload
           ? { ...product, quantity: product.quantity + 1 }
           : product
@@ -91,10 +91,11 @@ export const cartSlice = createSlice({
         theme: "light",
       });
 
-      localStorage.setItem("cartItems", JSON.stringify(state.cart));
+      localStorage.setItem("cartItems", JSON.stringify(newCart));
+      return newCart;
     },
-    decreaseQuantity: (state, action) => {
-      state.cart = state.cart
+    decreaseQuantity: (state: Product[], action) => {
+      const newCart = state
         .map((product) =>
           product.id === action.payload
             ? { ...product, quantity: product.quantity - 1 }
@@ -113,10 +114,11 @@ export const cartSlice = createSlice({
         theme: "light",
       });
 
-      localStorage.setItem("cartItems", JSON.stringify(state.cart));
+      localStorage.setItem("cartItems", JSON.stringify(newCart));
+      return newCart;
     },
     removeAllProducts: (state) => {
-      state.cart = [];
+      state = [];
 
       toast.warn("Cart is empty!", {
         position: "bottom-right",
@@ -129,7 +131,7 @@ export const cartSlice = createSlice({
         theme: "light",
       });
 
-      localStorage.setItem("cartItems", JSON.stringify(state.cart));
+      localStorage.setItem("cartItems", JSON.stringify(state));
     },
   },
 });
