@@ -14,6 +14,7 @@ import { store } from "./store/index.tsx";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { OrderPlaced } from "./pages/OrderPlaced.tsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Checkout />,
+      },
+      {
+        path: "/orderplaced",
+        element: <OrderPlaced />,
       },
     ],
   },

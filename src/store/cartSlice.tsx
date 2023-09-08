@@ -41,9 +41,9 @@ export const cartSlice = createSlice({
             : product
         );
 
-        toast.info("Increased product quantity!", {
+        toast.info("Increased product quantity", {
           position: "bottom-right",
-          autoClose: 2000,
+          autoClose: 1400,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
@@ -57,9 +57,9 @@ export const cartSlice = createSlice({
       } else {
         const newCart = [...state, { ...action.payload, quantity: 1 }];
 
-        toast.success("Product added to cart!", {
+        toast.success("Product added to cart", {
           position: "bottom-right",
-          autoClose: 2000,
+          autoClose: 1400,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: false,
@@ -80,9 +80,9 @@ export const cartSlice = createSlice({
           : product
       );
 
-      toast.info("Increased product quantity!", {
+      toast.info("Increased product quantity", {
         position: "bottom-right",
-        autoClose: 2000,
+        autoClose: 1400,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -103,9 +103,9 @@ export const cartSlice = createSlice({
         )
         .filter((product) => product.quantity > 0);
 
-      toast.info("Decreased product quantity!", {
+      toast.info("Decreased product quantity", {
         position: "bottom-right",
-        autoClose: 2000,
+        autoClose: 1400,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -120,9 +120,9 @@ export const cartSlice = createSlice({
     removeAllProducts: (state) => {
       state = [];
 
-      toast.warn("Cart is empty!", {
+      toast.warn("Cart is empty", {
         position: "bottom-right",
-        autoClose: 2000,
+        autoClose: 1400,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: false,
@@ -132,6 +132,7 @@ export const cartSlice = createSlice({
       });
 
       localStorage.setItem("cartItems", JSON.stringify(state));
+      return state;
     },
   },
 });

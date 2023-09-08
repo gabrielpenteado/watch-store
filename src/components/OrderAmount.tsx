@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { removeAllProducts } from "../store/cartSlice.js";
 
+import { useNavigate } from "react-router-dom";
+
 interface OrderAmountProps {
   getTotal: () => number;
 }
@@ -8,6 +10,8 @@ interface OrderAmountProps {
 export default function OrderAmount(props: OrderAmountProps) {
   const dispatch = useDispatch();
   const { getTotal } = props;
+
+  const navigate = useNavigate();
 
   return (
     <section
@@ -26,13 +30,34 @@ export default function OrderAmount(props: OrderAmountProps) {
       <p className="text-lg font-bold mt-4 mb-3 flex justify-between">
         Order Total <span>${getTotal()}</span>
       </p>
-      <button
-        onClick={() => dispatch(removeAllProducts())}
-        className="bg-gray-800 text-white font-bold p-4 rounded-lg text-lg tracking-wider
+      <div className="flex flex-col">
+        <button
+          onClick={() => {
+            dispatch(removeAllProducts());
+            navigate("/orderplaced");
+          }}
+          className="bg-gray-800 text-white font-bold p-3 mb-3 rounded-lg text-lg tracking-wider
         hover:bg-gray-700"
-      >
-        Place Order
-      </button>
+        >
+          Place Order
+        </button>
+        <button
+          onClick={() => navigate("/shop")}
+          className="bg-gray-800 text-white font-semibold p-2 mb-4 rounded-lg text-lg tracking-wider
+        hover:bg-gray-700"
+        >
+          Continue Shopping
+        </button>
+        <button
+          onClick={() => {
+            dispatch(removeAllProducts());
+            navigate("/");
+          }}
+          className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-1 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+        >
+          Empty Cart
+        </button>
+      </div>
     </section>
   );
 }
