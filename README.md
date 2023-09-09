@@ -8,7 +8,7 @@
 
 <div align="center">
   <a href="https://github.com/gabrielpenteado/watch-store/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/github/license/gabrielpenteado/watch-store?color=informational" alt="license"/>
+    <img src="https://img.shields.io/github/license/gabrielpenteado/mydearpage?color=informational" alt="license"/>
   </a>
 
   <img src="https://img.shields.io/static/v1?label=yarn&message=v1.22.19&color=informational&style=flat-square" alt="yarn version">
@@ -36,7 +36,7 @@
 </p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/watchstore.png"> 
+    <img src="https://raw.githubusercontent.com/gabrielpenteado/watch-store/main/public/watchstore.png"> 
 </p>
 
 <div align="center">
@@ -44,16 +44,16 @@
     <thead>
       <tr>
         <th style="text-align: center">
-          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print1">Screenshot-1</a>
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/watch-store/main/public/print1.jpg">Screenshot-1</a>
         </th>
         <th style="text-align: center">
-          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print2">Screenshot-2</a>
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/watch-store/main/public/print2.jpg">Screenshot-2</a>
         </th>
         <th style="text-align: center">
-          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print3">Screenshot-3</a>
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/watch-store/main/public/print3.jpg">Screenshot-3</a>
         </th>
         <th style="text-align: center">
-          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print4">Screenshot-4</a>
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/watch-store/main/public/print4.jpg">Screenshot-4</a>
         </th>   
       </tr>
     </thead>
