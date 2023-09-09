@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import watch from "../assets/watch6.png";
 
 export function Home() {
   return (
@@ -10,7 +11,7 @@ export function Home() {
           <Button path="shop">Buy it</Button>
         </div>
         <img
-          src="src/assets/watch6.png"
+          src={watch}
           alt="watch"
           className=" h-[340px] md:h-[450px] lg:h-[600px]"
         />
