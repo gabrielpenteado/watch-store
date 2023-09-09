@@ -20,7 +20,6 @@
 
 - [About the project](#-about-the-project)
   - Built with
-  - Screenshots
 - [Getting Started](#-getting-started)
   - Requirements
   - Installation
@@ -40,8 +39,28 @@
     <img src="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/watchstore.png"> 
 </p>
 
-### Built with
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print1">Screenshot-1</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print2">Screenshot-2</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print3">Screenshot-3</a>
+        </th>
+        <th style="text-align: center">
+          <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print4">Screenshot-4</a>
+        </th>   
+      </tr>
+    </thead>
+  </table>
+</div>
 
+### Built with
 ![vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 ![react](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
 ![typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -49,28 +68,7 @@
 ![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![react-router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 
-### 📷 Screenshots
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">
-        <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print1">Screenshot-1</a>
-      </th>
-      <th style="text-align: center">
-        <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print2">Screenshot-2</a>
-      </th>
-      <th style="text-align: center">
-        <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print3">Screenshot-3</a>
-      </th>
-      <th style="text-align: center">
-        <a href="https://raw.githubusercontent.com/gabrielpenteado/game-news-blog/main/public/print4">Screenshot-4</a>
-      </th>   
-    </tr>
-  </thead>
-</table>
-
-## 🍾 Getting started
+## 🚀 Getting started
 
 To start using <strong>Watch Store</strong> follow the instructions below.
 
