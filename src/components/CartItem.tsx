@@ -60,7 +60,7 @@ export default function CartItem(props: CartItemProps) {
         <p className="inline-block my-2 pt-2">
           <button
             onClick={() => dispatch(increaseQuantity(id))}
-            className="h-8 w-8 rounded-full font-bold border border-gray-400 
+            className="h-7 w-7 pb-8 text-lg rounded-lg font-semibold border border-gray-400 
             hover:bg-gray-200"
           >
             +
@@ -68,7 +68,7 @@ export default function CartItem(props: CartItemProps) {
           <span className="px-3">{quantity}</span>
           <button
             onClick={() => dispatch(decreaseQuantity(id))}
-            className="h-8 w-8 rounded-full font-bold border border-gray-400 
+            className="h-7 w-7 pb-8 text-lg rounded-lg font-semibold border border-gray-400 
             hover:bg-gray-200"
           >
             -
