@@ -15,11 +15,11 @@ export function Navbar() {
       >
         Watch<span className="text-white">Store</span>
       </Link>
-      <nav className="flex gap-4 items-center">
-        <Link to="/" className="hover:text-sky-400 text-lg">
+      <nav className="flex gap-2 md:gap-4 items-center">
+        <Link to="/" className="hover:text-sky-400 text-base md:text-lg">
           Home
         </Link>
-        <Link to="/shop" className="hover:text-sky-400 text-lg">
+        <Link to="/shop" className="hover:text-sky-400 text-base md:text-lg">
           Shop
         </Link>
         <Link to="/cart">
