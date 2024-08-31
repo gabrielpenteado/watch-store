@@ -5,7 +5,7 @@ import { Footer } from "./components/Footer";
 
 function App() {
   return (
-    <div className=" bg-zinc-800 h-[100vh] w-[100vw]">
+    <div className=" bg-zinc-800 w-[100vw]">
       <div className="flex-col">
         <Navbar />
         <Outlet />
